@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <remote  name="blaze-gitlab"
+           fetch="https://gitlab.com/projectblaze/"
+           revision="refs/heads/thirteen" />
+
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-13.0.0_r74"
            remote="aosp"
@@ -1194,4 +1201,9 @@
   <project path="tools/treble" name="platform/tools/treble" groups="tools,pdk" />
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" />
   <!-- END open-source projects -->
+
+  <!-- ProjectBlaze changes -->
+  <include name="snippets/remove.xml" />
+  <include name="snippets/blaze.xml" />
+  <include name="snippets/lineage.xml" />
 </manifest>
