@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+
+   <remote  name="blaze"
+           fetch="https://github.com/ProjectBlaze/"
+           revision="14" />
+
+   <remote  name="ProjectBlaze-Devices"
+           fetch="https://github.com/ProjectBlaze-Devices/"
+           revision="13" />   
+
+   <remote  name="kdragon"
+           fetch="https://github.com/kdrag0n/"
+           revision="master" />
+	
+   <remote  name="blaze-gitlab"
+           fetch="https://gitlab.com/projectblaze"
+	         revision="refs/heads/14" />
+   
+   <remote  name="lineage"
+           fetch="https://github.com/LineageOS"
+           revision="lineage-21.0" />
+
+  <project path="android" name="manifest" remote="blaze" />
+  <project path="art" name="art" groups="pdk" remote="blaze"/>
+  <project path="bionic" name="bionic" groups="pdk" remote="blaze"/>
+  <project path="build/make" name="build_make" groups="pdk"  remote="blaze" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="blaze" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="blaze" />
+
+  <!-- device repos -->
+  <project path="device/blaze/sepolicy" name="device_blaze_sepolicy" remote="blaze" />
+  <project path="device/qcom/common" name="AOSPA/android_device_qcom_common" revision="uvite" remote="github" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="blaze" />
+  <project path="device/mediatek/sepolicy_vndr" name="device_mediatek_sepolicy_vndr" remote="blaze" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="blaze" />
+
+  <!-- external repos -->
+  <project path="external/colorkt" name="external_colorkt" remote="blaze" />
+  <project path="external/cronet" name="external_cronet" remote="blaze-gitlab" />
+  <project path="external/faceunlock" name="external_faceunlock" remote="blaze" />
+  <project path="external/themelib" name="external_themelib" remote="blaze" />
+  <project path="external/tinyxml" name="external_tinyxml" groups="pdk" remote="blaze" />
+
+  <!-- framework repos -->
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="blaze" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="blaze" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="blaze" />
+  <project path="frameworks/libs/net" name="frameworks_libs_net" remote="blaze" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="blaze" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="blaze" /> 
+
+  <!-- hardware repos -->
+  <project path="hardware/xiaomi" name="hardware_xiaomi" groups="pdk" remote="blaze" />
+  <project path="hardware/oplus" name="hardware_oplus" groups="pdk" remote="blaze" />
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="blaze" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="blaze" />
+  <project path="hardware/blaze/interfaces" name="hardware_blaze_interfaces" group="pkg" remote="blaze" />
+   
+  <!-- packages repos -->
+  <project path="packages/apps/Aperture" name="packages_apps_Aperture" remote="blaze" />
+  <project path="packages/apps/Calendar" name="packages_apps_Calendar" groups="pdk" remote="blaze" />
+  <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk" remote="blaze" />
+  <project path="packages/apps/BlazeHouse" name="packages_apps_BlazeHouse" remote="blaze" />
+  <project path="packages/apps/BlazeWallpaperStub" name="packages_apps_BlazeWallpaperStub" remote="blaze" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk" remote="blaze" />
+  <project path="packages/apps/ExactCalculator" name="packages_apps_ExactCalculator" groups="pdk" remote="blaze" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs" remote="blaze" />
+  <project path="packages/apps/Messaging" name="packages_apps_Messaging" groups="pdk" remote="blaze" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="blaze" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs" remote="blaze" />
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk" remote="blaze" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="blaze" />
+  <project path="packages/modules/adb" name="packages_modules_adb" groups="pdk" remote="blaze" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs" remote="blaze" />
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="blaze" />
+  <project path="packages/overlays/Themes" name="packages_overlays_Themes" remote="blaze" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="blaze" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="blaze" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="blaze-gitlab" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="blaze" />
+  <project path="packages/apps/RepainterServicePriv" name="packages_apps_RepainterServicePriv" remote="blaze" />
+
+  <!-- system repos -->
+  <project path="system/bpf" name="system_bpf" groups="pdk" remote="blaze" />
+  <project path="system/core" name="system_core" groups="pdk" remote="blaze" />
+  <project path="system/libhidl" name="system_libhidl" groups="pdk" remote="blaze" />
+  <project path="system/media" name="system_media" groups="pdk" remote="blaze" />
+  <project path="system/netd" name="system_netd" groups="pdk" remote="blaze" />
+  <project path="system/security" name="system_security" groups="pdk" remote="blaze" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="blaze" />
+  <project path="system/update_engine" name="system_update_engine" remote="blaze" />
+  <project path="system/vold" name="system_vold" groups="pdk" remote="blaze" />
+
+  <!-- vendor repos -->
+  <project path="vendor/blaze" name="vendor_blaze" remote="blaze" />
+  <project path="vendor/gms" name="vendor_gms" remote="blaze-gitlab" />
+  <project path="vendor/support" name="vendor_support" remote="blaze" />	
+  <project path="vendor/qcom/common" name="ThankYouMario/proprietary_vendor_qcom_common" revision="uvite" remote="github" />
+	
+  <!-- Custom Clangs -->
+  <project path="prebuilts/clang/host/linux-x86/clang-proton" name="proton-clang" remote="kdragon" clone-depth="1" />
+
+</manifest>
