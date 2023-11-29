@@ -51,11 +51,11 @@
   <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="blaze" />
   <project path="device/mediatek/sepolicy_vndr" name="device_mediatek_sepolicy_vndr" remote="blaze" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="blaze" />
+  <project path="device/qcom/sepolicy_vndr-legacy-um" name="android_device_qcom_sepolicy_vndr-legacy-um" remote="blaze" />
 
   <!-- external repos -->
   <project path="external/colorkt" name="external_colorkt" remote="blaze" />
   <project path="external/cronet" name="external_cronet" remote="blaze-gitlab" />
-  <project path="external/faceunlock" name="external_faceunlock" remote="blaze" />
   <project path="external/themelib" name="external_themelib" remote="blaze" />
   <project path="external/tinyxml" name="external_tinyxml" groups="pdk" remote="blaze" />
 
@@ -69,7 +69,6 @@
 
   <!-- hardware repos -->
   <project path="hardware/xiaomi" name="hardware_xiaomi" groups="pdk" remote="blaze" />
-  <project path="hardware/oplus" name="hardware_oplus" groups="pdk" remote="blaze" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="blaze" />
   <project path="hardware/libhardware" name="hardware_libhardware" remote="blaze" />
   <project path="hardware/blaze/interfaces" name="hardware_blaze_interfaces" group="pkg" remote="blaze" />
@@ -84,6 +83,7 @@
   <project path="packages/apps/ExactCalculator" name="packages_apps_ExactCalculator" groups="pdk" remote="blaze" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs" remote="blaze" />
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" groups="pdk" remote="blaze" />
+  <project path="packages/appps/FaceUnlock" name="packages_apps_FaceUnlock" revision="14" remote="blaze" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="blaze" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs" remote="blaze" />
   <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk" remote="blaze" />
@@ -97,6 +97,7 @@
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="blaze-gitlab" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="blaze" />
   <project path="packages/apps/RepainterServicePriv" name="packages_apps_RepainterServicePriv" remote="blaze" />
+  <project path="packages/modules/Permission" name="packages_modules_Permission" remote="blaze" />
 
   <!-- system repos -->
   <project path="system/bpf" name="system_bpf" groups="pdk" remote="blaze" />
@@ -111,7 +112,7 @@
 
   <!-- vendor repos -->
   <project path="vendor/blaze" name="vendor_blaze" remote="blaze" />
-  <project path="vendor/gms" name="vendor_gms" remote="blaze-gitlab" />
+  <project path="vendor/gms" name="android_vendor_gms" remote="blaze-gitlab" />
   <project path="vendor/support" name="vendor_support" remote="blaze" />	
   <project path="vendor/qcom/common" name="ThankYouMario/proprietary_vendor_qcom_common" revision="uvite" remote="github" />
 	
