@@ -12,7 +12,7 @@ repo init -u https://github.com/ProjectBlaze/manifest.git -b 14
 Then to sync up:
 
 ```
-repo sync -c -j$(nproc --all) --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune
+repo sync -c -j$(nproc --all) --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune && repo forall -c git lfs pull
 ```
 
 ---------------------------------------------------------------------------------------
