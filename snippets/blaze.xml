@@ -28,9 +28,9 @@
            revision="lineage-21.0" />
 
   <project path="android" name="manifest" remote="blaze" />
-  <project path="art" name="art" groups="pdk" remote="blaze"/>
-  <project path="bionic" name="bionic" groups="pdk" remote="blaze"/>
-  <project path="build/make" name="build_make" groups="pdk"  remote="blaze" >
+  <project path="art" name="art" groups="pdk" remote="blaze" revision="qpr1" />
+  <project path="bionic" name="bionic" groups="pdk" remote="blaze" revision="qpr1"/>
+  <project path="build/make" name="build_make" groups="pdk"  remote="blaze"  revision="qpr1" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -39,11 +39,11 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="blaze" >
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="blaze" revision="qpr1" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="blaze" />
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="blaze" revision="qpr1" />
 
   <!-- device repos -->
   <project path="device/blaze/sepolicy" name="device_blaze_sepolicy" remote="blaze" />
@@ -60,12 +60,12 @@
   <project path="external/tinyxml" name="external_tinyxml" groups="pdk" remote="blaze" />
 
   <!-- framework repos -->
-  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="blaze" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="blaze" />
-  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="blaze" />
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="blaze" revision="qpr1" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="blaze" revision="qpr1" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="blaze" revision="qpr1" />
   <project path="frameworks/libs/net" name="frameworks_libs_net" remote="blaze" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="blaze" />
-  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="blaze" /> 
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="blaze" revision="qpr1" /> 
 
   <!-- hardware repos -->
   <project path="hardware/xiaomi" name="hardware_xiaomi" groups="pdk" remote="blaze" />
@@ -84,7 +84,7 @@
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs" remote="blaze" />
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" groups="pdk" remote="blaze" />
   <project path="packages/appps/FaceUnlock" name="packages_apps_FaceUnlock" revision="14" remote="blaze" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="blaze" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="blaze"  revision="qpr1"/>
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs" remote="blaze" />
   <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk" remote="blaze" />
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="blaze" />
@@ -92,8 +92,8 @@
   <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs" remote="blaze" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="blaze" />
   <project path="packages/overlays/Themes" name="packages_overlays_Themes" remote="blaze" />
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="blaze" />
-  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="blaze" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="blaze" revision="qpr1" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="blaze" revision="qpr1" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="blaze-gitlab" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="blaze" />
   <project path="packages/apps/RepainterServicePriv" name="packages_apps_RepainterServicePriv" remote="blaze" />
@@ -101,14 +101,14 @@
 
   <!-- system repos -->
   <project path="system/bpf" name="system_bpf" groups="pdk" remote="blaze" />
-  <project path="system/core" name="system_core" groups="pdk" remote="blaze" />
+  <project path="system/core" name="system_core" groups="pdk" remote="blaze" revision="qpr1" />
   <project path="system/libhidl" name="system_libhidl" groups="pdk" remote="blaze" />
   <project path="system/media" name="system_media" groups="pdk" remote="blaze" />
   <project path="system/netd" name="system_netd" groups="pdk" remote="blaze" />
   <project path="system/security" name="system_security" groups="pdk" remote="blaze" />
-  <project path="system/sepolicy" name="system_sepolicy" remote="blaze" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="blaze" revision="qpr1" />
   <project path="system/update_engine" name="system_update_engine" remote="blaze" />
-  <project path="system/vold" name="system_vold" groups="pdk" remote="blaze" />
+  <project path="system/vold" name="system_vold" groups="pdk" remote="blaze" revision="qpr1" />
 
   <!-- vendor repos -->
   <project path="vendor/blaze" name="vendor_blaze" remote="blaze" />
