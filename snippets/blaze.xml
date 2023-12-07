@@ -112,7 +112,7 @@
 
   <!-- vendor repos -->
   <project path="vendor/blaze" name="vendor_blaze" remote="blaze" />
-  <project path="vendor/gms" name="android_vendor_gms" remote="blaze-gitlab" />
+  <project path="vendor/gms" name="pixelos-aosp/vendor_gms" remote="gitlab" revision="fourteen" />
   <project path="vendor/support" name="vendor_support" remote="blaze" />	
   <project path="vendor/qcom/common" name="ThankYouMario/proprietary_vendor_qcom_common" revision="uvite" remote="github" />
 	
